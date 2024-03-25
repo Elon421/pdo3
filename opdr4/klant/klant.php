@@ -25,5 +25,10 @@ public function updateklant($klantnaam, $adres, $telefoonnummer, $email) {
     $stmt->execute([$klantnaam , $adres , $telefoonnummer, $email]);
 } 
 
+public function deleteklant(int $klant_id) {
+    $stmt = $this->dbh->execute("DELETE from klant WHERE klant_id = ?");
+    $stmt->execute([$klant_id]);
+}
+
 }
 ?>

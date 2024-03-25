@@ -29,8 +29,8 @@
             <td><?php echo $reservering['Reservering_id']?></td>
             <td><?php echo $reservering['Reservering_begin_tijd']?></td>
             <td><?php echo $reservering['Reservering_eind_tijd']?></td>
-            <td><a href="editfactuur.php">Edit</a></td>
-            <td><a href="">delete</a></td>
+            <td><a href="editreservering.php">Edit</a></td>
+            <td><a href="deletereservering.php">delete</a></td>
            <td></td>
         </tr> <?php } }?>
     </table>

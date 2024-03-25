@@ -25,5 +25,10 @@ public function updateProduct($omschrijving, $prijs_per_stuk, $prijs_totaal) {
     $stmt->execute([$omschrijving, $prijs_per_stuk, $prijs_totaal]);
 }
 
+public function deleteProduct(int $product_id) {
+    $stmt = $this->dbh->execute("DELETE from product WHERE product_id = ?");
+    $stmt->execute([$Factuur_id]);
+}
+
 }
 ?>

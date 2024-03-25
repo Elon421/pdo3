@@ -24,5 +24,11 @@ public function updateTafel($Max_aantal_personen) {
     WHERE tafel_id = ?");
     $stmt->execute([$Max_aantal_personen]);
 } 
+
+public function deleteTafel(int $tafel_id) {
+    $stmt = $this->dbh->execute("DELETE from tafel WHERE tafel_id = ?");
+    $stmt->execute([$tafel_id]);
+}
+
 }
 ?>

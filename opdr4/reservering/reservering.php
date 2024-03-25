@@ -24,5 +24,11 @@ public function updateReservering($Reservering_begin_tijd, $Reservering_eind_tij
     WHERE reservering_id = ?");
     $stmt->execute([$Reservering_begin_tijd, $Reservering_eind_tijd]);
 } 
+
+public function deleteReservering(int $reservering_id) {
+    $stmt = $this->dbh->execute("DELETE from reservering WHERE reservering_id = ?");
+    $stmt->execute([$reservering_id]);
+}
+
 }
 ?>

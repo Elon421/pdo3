@@ -43,8 +43,8 @@
             <td><?php echo $factuur['Aantal_producten']?></td>
             <td><?php echo $factuur['Tafel_id']?></td>
             <td><?php echo $factuur['Product_id']?></td>
-            <td><a href="">Edit</a></td>
-            <td><a href="">delete</a></td>
+            <td><a href="editfactuur.php">Edit</a></td>
+            <td><a href="deletefactuur.php">delete</a></td>
            <td></td>
         </tr> <?php } }?>
     </table>

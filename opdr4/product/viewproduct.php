@@ -30,8 +30,8 @@
             <td><?php echo $product['omschrijving']?></td>
             <td><?php echo $product['prijs_per_stuk']?></td>
             <td><?php echo $product['prijs_totaal']?></td>
-            <td><a href="">Edit</a></td>
-            <td><a href="">delete</a></td>
+            <td><a href="editproduct.php">Edit</a></td>
+            <td><a href="deleteproduct.php">delete</a></td>
            <td></td>
         </tr> <?php } }?>
     </table>

@@ -26,8 +26,8 @@
                 foreach ($tafels as $tafel) {?>
             <td><?php echo $tafels['tafel_id']?></td>
             <td><?php echo $tafel['max_aantal_personen']?></td>
-            <td><a href="">Edit</a></td>
-            <td><a href="">delete</a></td>
+            <td><a href="edittafel.php">Edit</a></td>
+            <td><a href="deletetafel.php">delete</a></td>
            <td></td>
         </tr> <?php } }?>
     </table>

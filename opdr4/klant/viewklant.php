@@ -34,8 +34,8 @@
             <td><?php echo $klant['adres']?></td>
             <td><?php echo $klant['telefoonnummer']?></td>
             <td><?php echo $klant['email']?></td>
-            <td><a href="">Edit</a></td>
-            <td><a href="">delete</a></td>
+            <td><a href="editklant.php">Edit</a></td>
+            <td><a href="deleteklant.php">delete</a></td>
            <td></td>
         </tr> <?php } }?>
     </table>
