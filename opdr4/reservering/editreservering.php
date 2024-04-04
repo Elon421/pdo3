@@ -4,7 +4,7 @@
 
     
         try {
-           $db = new Reservering();
+           $db = new Reservering($myDb);
             if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $db->updateReservering($_POST["reservering_begin_tijd"], $_POST["reservering_eind_tijd"], $_POST["klant_id"],
                     $_GET['reservering_id']);

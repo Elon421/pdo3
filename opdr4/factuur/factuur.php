@@ -13,10 +13,16 @@ class Factuur {
         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", [$F_Datum, $Btw6, $Btw19, $Totaal_excl_BTW, $Totaal_incl_BTW, $Prijs_totaal, $Aantal_producten, $Tafel_id, $Product_id]);
     }
 
+    public function selectfactuur() : array {
+        $stmt = $this->dbh->execute("SELECT * FROM factuur");
+        $result = $stmt->fetchAll();
+        return $result; 
+}
+
     public function updateFactuur($F_Datum, $Btw6, $Btw19, $Totaal_excl_BTW, $Totaal_incl_BTW, $prijs_totaal, $Aantal_producten, $Tafel_id, $Product_id) {
         $stmt = $this->dbh->execute("UPDATE factuur SET F_datum= ?, 6%btw = ?, 19%btw = ?, Totaal_excl_BTW = ?, Totaal
         WHERE product_id = ?");
-        $stmt->execute([$omschrijving, $prijs_per_stuk, $prijs_totaal]);
+        $stmt->execute([$F_Datum, $Btw6, $Btw19, $Totaal_excl_BTW, $Totaal_incl_BTW, $prijs_totaal, $Aantal_producten, $Tafel_id, $Product_id]);
     }
 
     public function deleteFactuur(int $Factuur_id) {

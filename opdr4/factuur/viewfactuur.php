@@ -30,7 +30,7 @@
         </tr>
 
         <tr> <?php
-            $facturen = $dbfactuur->selectFactuur(); 
+            $facturen = $dbfactuur->selectfactuur(); 
             if ($facturen) { 
                 foreach ($facturen as $factuur) {?>
             <td><?php echo $factuur['Factuur_id']?></td>

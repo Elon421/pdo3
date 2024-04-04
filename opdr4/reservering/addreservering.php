@@ -1,11 +1,12 @@
 <?php
+include "../db.php";
     include "reservering.php";
 
     $reservering = new Reservering($myDb);
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         try{
-            $reservering->insertReservering($_POST["Reservering_begin_tijd"], $_POST["Reservering_eind_tijd"]);
+            $reservering->insertReservering($_POST["Reservering_begin_tijd"], $_POST["Reservering_eind_tijd"], $_POST["klant_id"]);
             ECHO "Success";
         } catch (Exception $e){
             echo "Error" . $e->getMessage();

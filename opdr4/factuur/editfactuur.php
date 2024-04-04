@@ -1,10 +1,11 @@
 <?php
+include "../db.php";
     include "factuur.php";
     include "../header.php";
 
     
         try {
-           $dbh = new Factuur();
+           $dbh = new Factuur($myDb);
             if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $dbh->updateFactuur($_POST['F_Datum'], $_POST['6%Btw'], $_POST['19%Btw'], $_POST['Totaal_excl_BTW'], $_POST['Totaal_incl_BTW'], 
                 $_POST['Prijs_totaal'], $_POST["aantal_producten"], $_POST["Tafel_id"], $_POST["Product_id"],

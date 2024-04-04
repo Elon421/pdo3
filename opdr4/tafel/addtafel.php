@@ -1,4 +1,5 @@
 <?php
+include "../db.php";
     include "tafel.php";
 
     $tafel = new Tafel($myDb);

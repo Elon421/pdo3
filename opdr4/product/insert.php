@@ -1,4 +1,5 @@
 <?php
+include "../db.php";
     include "product.php";
 
     $product = new Product($myDb);

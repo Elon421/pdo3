@@ -4,7 +4,7 @@
 
     
         try {
-           $db = new Tafel();
+           $db = new Tafel($myDb);
             if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $db->updateTafel($_POST["max_aantal_personen"],
                     $_GET['tafel_id']);

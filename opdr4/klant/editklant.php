@@ -4,7 +4,7 @@
 
     
         try {
-           $dbh = new Klant();
+           $dbh = new Klant($myDb);
             if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $dbh->updateKlant($_POST["Klantnaam"], $_POST["Adres"], $_POST["Telefoonnummer"], $_POST["Email"],
                     $_GET['klant_id']);

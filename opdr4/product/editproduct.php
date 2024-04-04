@@ -4,7 +4,7 @@
 
     
         try {
-           $dbh = new Product();
+           $dbh = new Product($myDb);
             if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $dbh->updateproduct($_POST["omschrijving"], $_POST["prijs_per_stuk"], $_POST["prijs_totaal"],
                     $_GET['product_id']);

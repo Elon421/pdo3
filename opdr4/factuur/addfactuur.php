@@ -1,4 +1,5 @@
 <?php
+include "../db.php";
     include "factuur.php";
 
 
@@ -31,8 +32,6 @@
     <input type="text" name="Totaal_incl_BTW" placeholder="Totaal (incl BTW)">
     <input type="text" name="Prijs_totaal" placeholder="Totaal Prijs">
     <input type="text" name="aantal_producten" placeholder="Aantal Producten">
-    <input type="text" name="Tafel_id" placeholder="Tafel ID">
-    <input type="text" name="Product_id" placeholder="Producten">
     <input type="submit"> 
     </form>
 </body>

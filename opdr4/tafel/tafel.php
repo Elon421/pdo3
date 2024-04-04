@@ -14,7 +14,7 @@ class Tafel {
     }
 
     public function selectTafel() : array {
-        $stmt = $this->pdo->query("SELECT * FROM tafel");
+        $stmt = $this->dbh->execute("SELECT * FROM tafel");
         $result = $stmt->fetchAll();
         return $result; 
 }
